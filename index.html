@@ -107,6 +107,26 @@
             pointer-events: auto;
             position: relative;
         }
+
+        /* Showroom image formatting styling */
+        .showroom-img-frame {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 40px rgba(138, 93, 59, 0.15);
+        }
+        .showroom-img-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .showroom-img-frame:hover img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="text-slate-800 font-sans antialiased min-h-screen">
@@ -274,9 +294,9 @@
     <!-- Slider Section -->
     <section id="slider-section" class="py-16 px-4 lg:px-8 max-w-7xl mx-auto scroll-mt-20">
         <div class="text-center space-y-3 mb-12">
-            <span class="text-xs font-bold tracking-widest text-bisque-accent uppercase px-3 py-1 bg-white/50 rounded-full glass-panel">Interactive Showroom</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-black text-slate-900">Featured Digital Range</h2>
-            <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">Swipe or click through our absolute best-selling categories. Tap "Order Now" to load any product directly into the booking form below.</p>
+            <span class="text-xs font-bold tracking-widest text-bisque-accent uppercase px-3 py-1 bg-white/50 rounded-full glass-panel">Interactive Showroom Tour</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-black text-slate-900">Virtual Electronics Gallery</h2>
+            <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">Take a premium tour across our real showroom sections. Discover top-tier appliances integrated with luxury layout setups.</p>
         </div>
 
         <!-- Slider Wrapper with Glass Frame and Navigation Buttons -->
@@ -286,35 +306,33 @@
                 <div id="slider-progress" class="h-full bg-gradient-to-r from-bisque-accent to-bisque-deep transition-all duration-300" style="width: 16.66%;"></div>
             </div>
 
-            <div class="slider-container min-h-[360px] md:min-h-[420px]">
+            <div class="slider-container min-h-[460px] md:min-h-[420px]">
                 
-                <!-- SLIDE 1: Washing Machine -->
+                <!-- SLIDE 1: Washing Machine Showroom -->
                 <div class="slide active" data-index="0" data-name="Smart Inverter Washing Machine">
                     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full">
-                        <div class="w-full lg:w-1/2 flex justify-center">
-                            <!-- SVG Stylised Washing Machine illustration with rotating animation effect on hover -->
-                            <div class="relative w-64 h-64 bg-white/40 rounded-2xl flex items-center justify-center glass-card border-2 border-white/60 group">
-                                <svg class="w-40 h-40 text-bisque-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-                                    <!-- Dial -->
-                                    <circle cx="12" cy="6" r="1.5" />
-                                    <!-- Inner Tub -->
-                                    <circle cx="12" cy="14" r="5" class="group-hover:animate-spin origin-[12px_14px]" />
-                                    <path d="M12 11a3 3 0 0 1 3 3" />
-                                </svg>
-                                <span class="absolute top-4 right-4 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">In Stock</span>
+                        <div class="w-full lg:w-1/2">
+                            <!-- Showroom Interior displaying sleek Home Laundry layouts -->
+                            <div class="showroom-img-frame">
+                                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80" 
+                                     alt="Premium Washing Machine Showroom Display"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFE4C4/8A5D3B?text=Home+Laundry+Showroom';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-4 left-4 bg-white/95 text-slate-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-md">
+                                    <i class="fa-solid fa-store mr-1 text-bisque-deep"></i> Home Appliance Gallery
+                                </span>
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2 flex flex-col justify-center space-y-4">
                             <span class="text-bisque-accent text-xs font-extrabold uppercase tracking-widest">Home Appliances</span>
                             <h3 class="font-heading text-2xl lg:text-3xl font-bold text-slate-900">Front-Load AI Smart Washing Machine</h3>
                             <p class="text-sm text-slate-700 leading-relaxed">
-                                Equipped with futuristic Smart AI DD™ motor tech, this washing machine optimizes fabric care while delivering whisper-quiet washing cycles. Perfect for high-efficiency family homes.
+                                View our clean showroom displays featuring smart motors. Equipped with futuristic Smart AI DD™ motor technology, this model optimizes fabric care while delivering whisper-quiet washing cycles.
                             </p>
                             <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Capacity: 8.5 Kg</li>
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> AI Fabric Sensor</li>
-                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 5-Star Rating</li>
+                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 5-Star Eco Rating</li>
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 10-Yr Motor Warranty</li>
                             </ul>
                             <div class="flex items-center gap-4 pt-4">
@@ -327,36 +345,32 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 2: Air Conditioner -->
+                <!-- SLIDE 2: Air Conditioner / Modern Living Showroom -->
                 <div class="slide" data-index="1" data-name="Futuristic Dual Inverter AC">
                     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full">
-                        <div class="w-full lg:w-1/2 flex justify-center">
-                            <!-- SVG Stylised AC illustration -->
-                            <div class="relative w-64 h-64 bg-white/40 rounded-2xl flex items-center justify-center glass-card border-2 border-white/60">
-                                <svg class="w-48 h-40 text-bisque-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="6" width="20" height="8" rx="1.5" />
-                                    <line x1="6" y1="14" x2="18" y2="14" />
-                                    <!-- Fan indicator lines -->
-                                    <path d="M5 18 c0 3, 3 3, 3 3" class="animate-pulse" />
-                                    <path d="M12 18 c0 3, 0 3, 0 3" class="animate-pulse" />
-                                    <path d="M19 18 c0 3, -3 3, -3 3" class="animate-pulse" />
-                                    <!-- Display LED -->
-                                    <rect x="17" y="8" width="2.5" height="1.5" rx="0.5" fill="currentColor" class="text-emerald-500" />
-                                </svg>
-                                <span class="absolute top-4 right-4 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Best Seller</span>
+                        <div class="w-full lg:w-1/2">
+                            <!-- Showroom Interior showing high end Air conditioning and climate systems -->
+                            <div class="showroom-img-frame">
+                                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&q=80" 
+                                     alt="Premium Modern Cooling Showcase"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFE4C4/8A5D3B?text=Climate+Control+Showroom';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-4 left-4 bg-white/95 text-slate-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-md">
+                                    <i class="fa-solid fa-store mr-1 text-bisque-deep"></i> Premium Living Bay
+                                </span>
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2 flex flex-col justify-center space-y-4">
                             <span class="text-bisque-accent text-xs font-extrabold uppercase tracking-widest">Cooling Solutions</span>
                             <h3 class="font-heading text-2xl lg:text-3xl font-bold text-slate-900">1.5 Ton 5-Star Dual Inverter Smart AC</h3>
                             <p class="text-sm text-slate-700 leading-relaxed">
-                                Escape Jamnagar's intense summers with instant 4-in-1 convertible cooling. Monitor temperature status and energy consumption directly from your smartphone.
+                                Step into our customized thermal rooms on Indira Marg. Experience instant 4-in-1 convertible cooling that lets you monitor temperature status and energy consumption directly from your smartphone.
                             </p>
                             <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Wi-Fi Enabled</li>
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> PM 2.5 Air Filter</li>
-                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 100% Copper Condenser</li>
-                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Fast Cooling Mode</li>
+                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 100% Copper Tubes</li>
+                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Turbo Jet Cool</li>
                             </ul>
                             <div class="flex items-center gap-4 pt-4">
                                 <span class="text-2xl font-black text-bisque-deep">₹41,990 <span class="text-xs font-normal text-slate-500 line-through">₹54,000</span></span>
@@ -368,34 +382,32 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 3: Refrigerator -->
+                <!-- SLIDE 3: Refrigerator Showroom -->
                 <div class="slide" data-index="2" data-name="Smart Convertible Refrigerator">
                     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full">
-                        <div class="w-full lg:w-1/2 flex justify-center">
-                            <!-- SVG Stylised Refrigerator illustration -->
-                            <div class="relative w-64 h-64 bg-white/40 rounded-2xl flex items-center justify-center glass-card border-2 border-white/60">
-                                <svg class="w-36 h-48 text-bisque-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="5" y="2" width="14" height="20" rx="2" />
-                                    <!-- Horizontal line dividing freezer -->
-                                    <line x1="5" y1="9" x2="19" y2="9" />
-                                    <!-- Door Handles -->
-                                    <line x1="8" y1="4" x2="8" y2="7" stroke-width="2.5" />
-                                    <line x1="8" y1="11" x2="8" y2="15" stroke-width="2.5" />
-                                </svg>
-                                <span class="absolute top-4 right-4 bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Limited Edition</span>
+                        <div class="w-full lg:w-1/2">
+                            <!-- Kitchen interior showroom displaying luxury refrigerators -->
+                            <div class="showroom-img-frame">
+                                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80" 
+                                     alt="Premium Refrigerator Interior Setup"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFE4C4/8A5D3B?text=Kitchen+Gallery';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-4 left-4 bg-white/95 text-slate-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-md">
+                                    <i class="fa-solid fa-store mr-1 text-bisque-deep"></i> Modular Kitchen Showroom
+                                </span>
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2 flex flex-col justify-center space-y-4">
                             <span class="text-bisque-accent text-xs font-extrabold uppercase tracking-widest">Home Appliances</span>
                             <h3 class="font-heading text-2xl lg:text-3xl font-bold text-slate-900">340L Double Door Convertible Refrigerator</h3>
                             <p class="text-sm text-slate-700 leading-relaxed">
-                                Seamless convertible compartments that let you expand freezer capacity into conventional storage space at the press of a single smart touch button.
+                                See convertible setups in modern modular formats. Transition freezer space to conventional food storage at the press of a single smart touch button in our kitchen layout section.
                             </p>
                             <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Inverter Compressor</li>
-                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Toughened Glass Shelves</li>
+                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Toughened Shelves</li>
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Fresh O2 Technology</li>
-                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Deodorizer Installed</li>
+                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Odor Neutralizer</li>
                             </ul>
                             <div class="flex items-center gap-4 pt-4">
                                 <span class="text-2xl font-black text-bisque-deep">₹38,500 <span class="text-xs font-normal text-slate-500 line-through">₹46,000</span></span>
@@ -407,28 +419,26 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 4: Television -->
+                <!-- SLIDE 4: Television Showroom -->
                 <div class="slide" data-index="3" data-name="Ultra HD Smart LED TV">
                     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full">
-                        <div class="w-full lg:w-1/2 flex justify-center">
-                            <!-- SVG Stylised TV illustration -->
-                            <div class="relative w-64 h-64 bg-white/40 rounded-2xl flex items-center justify-center glass-card border-2 border-white/60">
-                                <svg class="w-48 h-40 text-bisque-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="13" rx="1.5" />
-                                    <!-- Stand -->
-                                    <path d="M9 21h6" />
-                                    <path d="M12 16v5" />
-                                    <!-- Content screen mock design -->
-                                    <circle cx="12" cy="9.5" r="2.5" stroke-dasharray="2 1" />
-                                </svg>
-                                <span class="absolute top-4 right-4 bg-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">New Arrival</span>
+                        <div class="w-full lg:w-1/2">
+                            <!-- Showroom Interior featuring premium OLED / smart television screens -->
+                            <div class="showroom-img-frame">
+                                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1000&q=80" 
+                                     alt="Premium Television Showroom Display"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFE4C4/8A5D3B?text=Home+Theater+Gallery';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-4 left-4 bg-white/95 text-slate-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-md">
+                                    <i class="fa-solid fa-store mr-1 text-bisque-deep"></i> Home Theater Showroom
+                                </span>
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2 flex flex-col justify-center space-y-4">
                             <span class="text-bisque-accent text-xs font-extrabold uppercase tracking-widest">Home Entertainment</span>
                             <h3 class="font-heading text-2xl lg:text-3xl font-bold text-slate-900">55" Ultra HD 4K Glass-Bezel Smart TV</h3>
                             <p class="text-sm text-slate-700 leading-relaxed">
-                                Experience ultra-high fidelity colors with Quantum Dot display matrix. Delivers cinematic theater aesthetics right inside your living room in Jamnagar.
+                                Witness cinematic beauty on our high contrast display walls. Experience ultra-high fidelity colors with Quantum Dot matrix that deliver stunning theatre environments right inside your room.
                             </p>
                             <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Dolby Atmos Sound</li>
@@ -446,32 +456,31 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 5: Mobile Phone -->
+                <!-- SLIDE 5: Mobile Phones Showcase -->
                 <div class="slide" data-index="4" data-name="Pro Flagship Smartphone">
                     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full">
-                        <div class="w-full lg:w-1/2 flex justify-center">
-                            <!-- SVG Stylised Mobile illustration -->
-                            <div class="relative w-64 h-64 bg-white/40 rounded-2xl flex items-center justify-center glass-card border-2 border-white/60">
-                                <svg class="w-32 h-44 text-bisque-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="5" y="2" width="14" height="20" rx="3" />
-                                    <!-- Dynamic Island / Punch hole -->
-                                    <rect x="11" y="3.5" width="2" height="0.8" rx="0.4" fill="currentColor" />
-                                    <!-- Home bar -->
-                                    <line x1="10" y1="20" x2="14" y2="20" stroke-width="2" />
-                                </svg>
-                                <span class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Top Seller</span>
+                        <div class="w-full lg:w-1/2">
+                            <!-- Premium boutique digital counter showroom showing phones -->
+                            <div class="showroom-img-frame">
+                                <img src="https://images.unsplash.com/photo-1563013544-824ae1d704d3?auto=format&fit=crop&w=1000&q=80" 
+                                     alt="Premium Phone Gallery Display"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFE4C4/8A5D3B?text=Smartphone+Gallery';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-4 left-4 bg-white/95 text-slate-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-md">
+                                    <i class="fa-solid fa-store mr-1 text-bisque-deep"></i> Gadgets & Phone Bar
+                                </span>
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2 flex flex-col justify-center space-y-4">
                             <span class="text-bisque-accent text-xs font-extrabold uppercase tracking-widest">Gadgets</span>
                             <h3 class="font-heading text-2xl lg:text-3xl font-bold text-slate-900">Flagship Glass-Back Pro Mobile</h3>
                             <p class="text-sm text-slate-700 leading-relaxed">
-                                Featuring high-performance AI computational cores with stunning triple lens optical array. Built to support full 5G capability with supercharger battery setups.
+                                Get a touch-and-feel demo at our specialized central smartphone counter. Features high-performance AI computational cores with stunning triple lens array and 5G speeds.
                             </p>
                             <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 120Hz Fluid AMOLED</li>
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 200MP Triple Camera</li>
-                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 12GB RAM / 256GB SSD</li>
+                                <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 12GB RAM / 256GB Storage</li>
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> 100W Hyper Charging</li>
                             </ul>
                             <div class="flex items-center gap-4 pt-4">
@@ -484,26 +493,26 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 6: Laptop -->
+                <!-- SLIDE 6: Computing Showroom -->
                 <div class="slide" data-index="5" data-name="Ultra Book Core Laptop">
                     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 h-full">
-                        <div class="w-full lg:w-1/2 flex justify-center">
-                            <!-- SVG Stylised Laptop illustration -->
-                            <div class="relative w-64 h-64 bg-white/40 rounded-2xl flex items-center justify-center glass-card border-2 border-white/60">
-                                <svg class="w-48 h-40 text-bisque-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20 16V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v11" />
-                                    <!-- Keyboard lower panel -->
-                                    <rect x="2" y="16" width="20" height="4" rx="1" />
-                                    <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3" stroke-linecap="round" />
-                                </svg>
-                                <span class="absolute top-4 right-4 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">New Release</span>
+                        <div class="w-full lg:w-1/2">
+                            <!-- Modern workspace style laptop showroom display -->
+                            <div class="showroom-img-frame">
+                                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1000&q=80" 
+                                     alt="Laptop & Computing Showroom Display"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFE4C4/8A5D3B?text=Computing+Zone';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-4 left-4 bg-white/95 text-slate-900 text-xs font-extrabold px-3 py-1.5 rounded-lg shadow-md">
+                                    <i class="fa-solid fa-store mr-1 text-bisque-deep"></i> Computing Lounge
+                                </span>
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2 flex flex-col justify-center space-y-4">
                             <span class="text-bisque-accent text-xs font-extrabold uppercase tracking-widest">Computing</span>
                             <h3 class="font-heading text-2xl lg:text-3xl font-bold text-slate-900">Ultra Slim 14" Glass-Touch Laptop</h3>
                             <p class="text-sm text-slate-700 leading-relaxed">
-                                Designed for absolute workflow flexibility. Extreme battery endurance paired with a gorgeous high dynamic range panel, perfect for working anywhere in Jamnagar.
+                                Experience lightweight premium notebooks at our active digital workbench. Built for maximum workflow flexibility and long battery life inside a elegant carbon-chassis.
                             </p>
                             <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
                                 <li><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Next-Gen Core CPU</li>
